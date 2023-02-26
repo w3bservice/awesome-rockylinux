@@ -23,3 +23,17 @@ echo "RequiredComponents=awesome;gnome-settings-daemon;"        		>> /usr/share/
 echo "DesktopName=Awesome"                                              >> /usr/share/gnome-session/sessions/awesome.session
 
 echo "[+] Succsessfully created session file!"
+echo "[i] Cloning theme from git..."
+
+#simple theme that I like from a classic repo, cam be changed simply through
+git clone --recurse-submodules --remote-submodules --depth 1 -j 2 https://github.com/lcpz/awesome-copycats.git
+
+echo "[+] git cloned!"
+echo "[i] moving config files..."
+
+#my personal choice on these themes, can be just changed and noramlly should work
+THEME_CHOSEN = "vertex"
+mv -bv awesome-copycats/themes/$THEME_CHOSEN/* ~/.config/awesome; rm -rf awesome-copycats
+
+echo "[+] files moved!"
+
