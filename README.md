@@ -1,0 +1,1 @@
+Not much to say: a bash script to make the installation "clean" for now!
