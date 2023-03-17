@@ -27,7 +27,6 @@ echo "[i] Cloning theme from git..."
 
 #simple theme that I like from a classic repo, cam be changed simply through
 git clone --recurse-submodules --remote-submodules --depth 1 -j 2 https://github.com/lcpz/awesome-copycats.git
-
 echo "[+] git cloned!"
 echo "[i] moving config files..."
 
@@ -37,3 +36,16 @@ mv -bv awesome-copycats/themes/$THEME_CHOSEN/* ~/.config/awesome; rm -rf awesome
 
 echo "[+] files moved!"
 
+echo "[i] Cloning freedesktop addon..."
+
+mkdir ~/.config/awesome/freedesktop
+git clone https://github.com/lcpz/awesome-freedesktop.git ~/.config/awesome/freedesktop
+
+echo "[+] Done !"
+echo "[i] Cloning lain addon..."
+
+mkdir ~/.config/awesome/lain
+git clone https://github.com/lcpz/lain.git ~/.config/awesome/lain
+
+
+echo "[+] Done!"
