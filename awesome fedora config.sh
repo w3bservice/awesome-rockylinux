@@ -31,11 +31,21 @@ echo "[+] git cloned!"
 echo "[i] moving config files..."
 
 #my personal choice on these themes, can be just changed and noramlly should work
-THEME_CHOSEN = "vertex"
-mv -bv awesome-copycats/themes/$THEME_CHOSEN/* ~/.config/awesome; rm -rf awesome-copycats
+THEME_CHOSEN = 7
+
+mv -bv awesome-copycats/* ~/.config/awesome; rm -rf awesome-copycats
+
+cp ~/.config/awesome/rc.lua.template ~/.config/awesome/rc.lua
+
+#hardcoded for now
+sed -i '100s/.*/local chosen_theme = themes[7]/' ~/.config/awesome/rc.lua
+
+
 
 echo "[+] files moved!"
 
+
+#This part is to ensure that the addons required by the differents themes will be really installed
 echo "[i] Cloning freedesktop addon..."
 
 mkdir ~/.config/awesome/freedesktop
@@ -49,3 +59,8 @@ git clone https://github.com/lcpz/lain.git ~/.config/awesome/lain
 
 
 echo "[+] Done!"
+
+#Misc setup
+
+#To have FR/EN keyboard swich using alt+shift
+setxkbmap -layout "us,gr" -option "grp:alt_shift_toggle"
