@@ -58,6 +58,9 @@ cp ~/.config/awesome/rc.lua.template ~/.config/awesome/rc.lua
 #hardcoded for now
 sed -i '100s/.*/local chosen_theme = themes[7]/' ~/.config/awesome/rc.lua
 
+#set default terminal to xterm
+sed -i '103s/.*/local terminal     = "gnome-terminal"/' ~/.config/awesome/rc.lua
+
 
 
 echo "[+] files moved!"
@@ -84,3 +87,12 @@ echo "[+] Done!"
 
 #To have FR/EN keyboard swich using alt+shift
 setxkbmap -layout "us,fr" -option "grp:alt_shift_toggle"
+
+#To have copy/paste feature on vmware
+echo "awful.util.spawn_with_shell("vmware-user-suid-wrapper --no--startup-id")" >> ~/.config/awesome/rc.lua
+
+
+
+# Finally; some instructions:
+
+echo "[i] Now, you quit gnome wm (or wathever you are on), and before logon choose "awesome" at the bottom-right of your screen."
