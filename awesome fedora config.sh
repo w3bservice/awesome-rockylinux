@@ -58,7 +58,7 @@ cp ~/.config/awesome/rc.lua.template ~/.config/awesome/rc.lua
 #hardcoded for now
 sed -i '100s/.*/local chosen_theme = themes[7]/' ~/.config/awesome/rc.lua
 
-#set default terminal to xterm
+#set default terminal to gnome-terminal (default is xterm)
 sed -i '103s/.*/local terminal     = "gnome-terminal"/' ~/.config/awesome/rc.lua
 
 
