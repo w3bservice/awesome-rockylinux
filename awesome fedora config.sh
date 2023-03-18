@@ -59,7 +59,7 @@ cp ~/.config/awesome/rc.lua.template ~/.config/awesome/rc.lua
 sed -i '100s/.*/local chosen_theme = themes[7]/' ~/.config/awesome/rc.lua
 
 #set default terminal to gnome-terminal (default is xterm)
-sed -i '103s/.*/local terminal     = "gnome-terminal"/' ~/.config/awesome/rc.lua
+sed -i '103s/.*/local terminal     = "gnome-terminal --geometry=20x20"/' ~/.config/awesome/rc.lua
 
 
 
@@ -96,3 +96,5 @@ echo "awful.util.spawn_with_shell("vmware-user-suid-wrapper --no--startup-id")" 
 # Finally; some instructions:
 
 echo "[i] Now, you quit gnome wm (or wathever you are on), and before logon choose "awesome" at the bottom-right of your screen."
+
+#TODO: try the layout of https://github.com/worron/awesome-config
