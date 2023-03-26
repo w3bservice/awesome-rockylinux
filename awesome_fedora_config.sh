@@ -7,6 +7,10 @@ sudo dnf install awesome.x86_64
 #widgets
 sudo dnf install vicious.noarch
 
+
+#misc tools
+sudo dnf install st
+
 echo "[i] Creating /usr/share/applications/awesome.desktop ..."
 sudo touch /usr/share/applications/awesome.desktop
 
@@ -59,7 +63,7 @@ cp ~/.config/awesome/rc.lua.template ~/.config/awesome/rc.lua
 sed -i '100s/.*/local chosen_theme = themes[7]/' ~/.config/awesome/rc.lua
 
 #set default terminal to gnome-terminal (default is xterm)
-sed -i '103s/.*/local terminal     = "gnome-terminal --geometry=20x20"/' ~/.config/awesome/rc.lua
+sed -i '103s/.*/local terminal     = "st --geometry=20x20"/' ~/.config/awesome/rc.lua
 
 
 
