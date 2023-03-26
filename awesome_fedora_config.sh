@@ -93,7 +93,7 @@ echo "[+] Done!"
 setxkbmap -layout "us,fr" -option "grp:alt_shift_toggle"
 
 #To have copy/paste feature on vmware
-echo 'awful.util.spawn_with_shell("vmware-user-suid-wrapper --no--startup-id')" >> ~/.config/awesome/rc.lua
+echo 'awful.util.spawn_with_shell("vmware-user-suid-wrapper --no--startup-id")' >> ~/.config/awesome/rc.lua
 
 
 
