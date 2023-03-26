@@ -60,17 +60,17 @@ mv -bv awesome-copycats/* ~/.config/awesome; rm -rf awesome-copycats
 cp ~/.config/awesome/rc.lua.template ~/.config/awesome/rc.lua
 
 #hardcoded for now
-sed -i '100s/.*/local chosen_theme = themes[7]/' ~/.config/awesome/rc.lua
+sed -i "100s/.*/local chosen_theme = themes[$THEME_CHOSEN]/" ~/.config/awesome/rc.lua
 
 #set default terminal to gnome-terminal (default is xterm)
-sed -i '103s/.*/local terminal     = "st --geometry=20x20"/' ~/.config/awesome/rc.lua
+sed -i '103s/.*/local terminal     = "st"/' ~/.config/awesome/rc.lua
 
 
 
 echo "[+] files moved!"
 
 
-#This part is to ensure that the addons required by the differents themes will be really installed
+#This part is to ensure that the addons required by the differents themes will be really installed (yeah I dont trust git on this one)
 echo "[i] Cloning freedesktop addon..."
 rm -rf ~/.config/awesome/freedesktop
 mkdir ~/.config/awesome/freedesktop
