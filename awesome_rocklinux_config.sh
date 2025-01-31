@@ -9,7 +9,7 @@ sudo dnf install vicious.noarch
 
 
 #misc tools
-sudo dnf install st
+sudo dnf install tilda
 
 echo "[i] Creating /usr/share/applications/awesome.desktop ..."
 sudo touch /usr/share/applications/awesome.desktop
@@ -63,7 +63,7 @@ cp ~/.config/awesome/rc.lua.template ~/.config/awesome/rc.lua
 sed -i "100s/.*/local chosen_theme = themes[$THEME_CHOSEN]/" ~/.config/awesome/rc.lua
 
 #set default terminal to gnome-terminal (default is xterm)
-sed -i '103s/.*/local terminal     = "st"/' ~/.config/awesome/rc.lua
+sed -i '103s/.*/local terminal     = "tilda"/' ~/.config/awesome/rc.lua
 
 
 
